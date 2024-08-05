@@ -166,10 +166,10 @@
                                     </li>
                                     <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
-                                            <a href="cart/list.html">
+                                            <a href="{{route('cart.index')}}">
                                                 <i data-feather="shopping-cart"></i>
                                                 <span id="cart-count" class="label label-theme rounded-pill">
-                                                    0
+                                                    {{Cart::instance('cart')->content()->count()}}
                                                 </span>
                                             </a>
                                         </div>

@@ -15,9 +15,20 @@ class ShopController extends Controller
         return view('shop', ['products' => $products]);
     }
 
-    public function productDetials($slug)
+    public function productDetails($slug)
     {
         $product = Product::where('slug', $slug)->first();
-        return view('details', ['product' => $product]);
+
+        // if (!$product) {
+        //     // Handle the case where the product is not found
+        //     return redirect()->route('product.notfound');
+        // }
+
+        $rproducts = Product::where('slug', '!=', $slug)->inRandomOrder()->take(5)->get();
+
+        return view('details', [
+            'product' => $product,
+            'rproducts' => $rproducts
+        ]);
     }
 }

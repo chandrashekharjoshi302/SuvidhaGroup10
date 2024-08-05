@@ -788,7 +788,7 @@
             <div class="col-12">
                 <h2 class="mb-lg-4 mb-3">Customers Also Bought These</h2>
                 <div class="product-wrapper product-style-2 slide-4 p-0 light-arrow bottom-space">
-                    {{-- @foreach ($rproducts as $rproduct)
+                    @foreach ($rproducts as $rproduct)
                                             
                     <div>
                         <div class="product-box">
@@ -864,7 +864,7 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach                     --}}
+                    @endforeach                    
                 </div>
             </div>
         </div>
